@@ -1,0 +1,164 @@
+:root {
+    --color-white: #ffffff;
+    --color-navigation: rgb(238, 143, 66);
+    --color-text: #222222;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.Header {
+    background-color: var(--color-white);
+}
+
+.Header-figure {
+    margin-bottom: 0;
+}
+
+.Header-img {
+    width: 300px;
+}
+
+.Header-lista,
+.navegacion-ul {
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.Header-item,
+.navegacion-item {
+    list-style-type: none;
+}
+.Header-item {
+    list-style-type: none;
+    margin-right: .25rem;
+}
+.Header-item:last-of-type {
+    margin-right: 0;
+}
+
+.Header-link {
+    display: block;
+    padding: .25rem .5rem;
+}
+    .Header-link.youtube {
+        background-color: rgb(240, 70, 70);
+        color: var(--color-white);
+    }
+    .Header-link.facebook {
+        color: var(--color-white);
+        background-color: steelblue;
+    }
+    .Header-link.instagram {
+        background-color: orange;
+        color: var(--color-white);
+    }
+    .Header-link.pinterest {
+        background-color: red;
+        color: var(--color-white);
+    }
+    .Header-link.twitter {
+        background-color: darkcyan;
+        color: var(--color-white);
+    }
+
+/* navegacion */
+.navegacion {
+    padding: 1rem;
+    background-color: var(--color-navigation);
+}
+.navegacion-ul {
+    flex-direction: column;
+    align-items: center;
+}
+.navegacion-item {
+    padding: .35rem 0;
+}
+.navegacion-link {
+    color: var(--color-text);
+    display: block;
+}
+.navegacion-link:hover {
+    color: var(--color-white);
+}
+
+/* main */
+.comentarios-user i {
+    font-size: 3rem;
+    display: inline-block;
+    margin-top: .5rem;
+    margin-right: .8rem;
+}
+
+.aside {
+    margin-top: 1rem;
+}
+
+.biografia {
+    margin-top: 1rem;
+}
+
+.busqueda-icono i {
+    font-size: 1.5rem;
+    margin-right: .5rem;
+}
+
+.busqueda .form-group {
+    margin-bottom: 0;
+}
+.busquedaResultado {
+    margin-top: 1rem;
+}
+
+.biografia h2 {
+    margin-bottom: 1rem;
+}
+
+.biografia:nth-of-type(odd) p {
+    order: 2;
+}
+
+/* brakpoints */
+
+@media screen and (max-width: 768px) {
+    .Header-lista {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    .Header-item {
+        margin-right: 0;
+    }
+    .Header-link.youtube {
+        border-radius: 5px 0 0 5px;
+    }
+    .Header-link.twitter {
+        border-radius: 0 5px 5px 0;
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+    .navegacion {
+        padding: 0;
+        margin-top: 2rem;
+    }
+    .navegacion-ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .navegacion-link {
+        padding: 1rem 1.4rem;
+    }
+    .navegacion-item {
+        padding: 0;
+    }
+    .navegacion-link:hover {
+        color: var(--color-text);
+        background-color: var(--color-white);
+    }
+}
